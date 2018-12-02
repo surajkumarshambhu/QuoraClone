@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quora CLone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">   
+    *{
+      font-family: monospace,sans-serif;
+    }
+   	 body{
+          background-image: url("one.png");
+   	 }
+   	 .one{
+   	 	    background: #fff;
+		    border: 1px solid #e2e2e2;
+		    box-shadow: 0 0 5px #888;
+		    border-radius: 4px;
+		    padding-top: 25px;
+		    width: 650px;
+		    height: 500px;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+		    top: 10%;
+   	 }
+   	 .mylogo span{
+   	 	font-size: 5em;
+      color: #960d0d;
+      margin-left: 24%;
+        	 }
+   	 .mylogo h2{
+   	 	    font-size: 19px;
+		    font-weight: 400;
+		    font-family: Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+		    margin: 8px 0 32px;
+		    color: #949494;
+		    text-align: center;
+   	 }
+   	 #username{
+   	 	    border-radius: 3px;
+		    font-size: 14px;
+		    display: block;
+		    height: 20px;
+		    width: 34%;
+		    padding-left:8px;
+   	 }
+   	 #password{
+   	 	    border-radius: 3px;
+		    font-size: 14px;
+		    display: block;
+		    height: 20px;
+		    width: 34%;
+		    padding-left:8px;
+   	 }
+   	.google{
+   		    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		    background: #df4930;
+    	    padding: 8px 21px;
+		    color: white;
+		    text-decoration: none;
+            border-radius: 5px; 
+   	}
+   	.google i{
+   		    text-decoration: none;
+		    font-size: 15px;
+		    color: #e01515;
+		    padding: 4px 8px 5px 7px;
+		    box-sizing: border-box;
+		    background: white;
+		    margin-left: -11px;
+		    border-radius: 3px;
+   	}
+	.facebook{
+		    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		    background: #3b5998;
+		    color: white;
+	    	padding: 8px 21px;
+		    text-decoration: none;
+		    border-radius: 5px; 
+	}
+   	.facebook i{
+   		    text-decoration: none;
+		    font-size: 15px;
+		    color: #3a66ad;
+		    padding: 4px 8px 5px 7px;
+		    box-sizing: border-box;
+		    background: white;
+		    margin-left: -11px;
+		    border-radius: 3px;
+   	}
+   	.left{
+        margin: 32px;
+	    position: relative;
+	    width: 40%;
+	    float: left;
+	    text-align: center;
+   	}
+      .left_signup{
+          padding: 45px;
+          position: relative;
+          width: 40%;
+          float: left;
+          margin-top: -17px;
+    }
+    .left_signup div{
+      width: 50%;
+      box-sizing: border-box;
+      float: left;
+      padding-right: 10px;
+      margin-top: 10px;
+    }
+    .left_signup div input{
+      width: 100%;
+      border-radius: 3px;
+      border: none;
+      line-height: 1.9;
+      background-color: #d4caca;
+    }
+    .left_signup span{
+      font-size: 1.2em;
+    }
+   	.left_google i{
+   		float: left;
+   	}
+   	.left_google a{
+	    width: 100%;
+    	display: inline-block;
+    	text-align: center;
+    	line-height: 1.5;
+   	}
+   	.left_google a:last-child{
+			margin-top: 20px;
+   	}   	
+   	.left_other{
+        position: absolute;
+   	}
+   	.left_other p{
+   		position: relative;
+        width: 118%;
+        color: #949494;
+   	}
+   	.left_other a{
+   		text-decoration: none;
+    	color: #633f92;
+   	}
+   /*	.right:after{
+   		content: "";
+   		border-left: 1px solid #967e7e;
+   	}*/
+   	.right{
+   		margin: 32px;
+	    position: relative;
+	    width: 35%;
+	    float: right;
+	    right: 23px;
+
+   	}
+   	.right span{
+   		font-size: 1.2em;
+   	}
+   	.input_user{
+        width: 100%;
+        border: none;
+		    font-size: 15px;
+		    padding-left: 8px;
+		    padding-right: 8px;
+		    min-height: 32px;
+		    margin-bottom: 8px;
+		    margin-top: 15px;
+		    background-color: #d4caca;
+		    border-radius: 3px;
+		    box-shadow:inset 0 1px 1px rgba(200,200,200,0.3);
+   	}
+   	.input_pwd{
+        width: 100%;
+        border: none;
+		    font-size: 15px;
+		    padding-left: 8px;
+		    padding-right: 8px;
+		    min-height: 32px;
+		    margin-bottom: 8px;
+		    margin-top: 17px;
+		    background-color: #d4caca;
+		    border-radius: 3px;
+   	}
+   	.right a{
+   		text-decoration: none;
+   		color: #5755c5;
+   	}
+    .submit{
+    	border-radius: 3px;
+	    padding: 3px 7px 4px 7px;
+	    text-align: center;
+	    text-decoration: none;
+	    cursor: pointer;
+	    background: #3e78ad;
+	    color: #fff;
+	    border: 1px solid #3a66ad;
+	    float: right;
+	    font-size: 20px;
+	    margin-right: -18px;
+    }
+    .confirmpwd{
+      width: 100% !important;
+    }
+    .left_signup_submit{
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          background-color: #3e78ad !important;
+          /* color: #fff; */
+          border: 1px solid #3a66ad !important;
+          float: right;
+          font-size: 19px;
+          opacity: .7;
+    }
+   </style>
+   <script type="text/javascript">
+         $(document).ready(function(){
+        $(".next").click(function(){
+            $(".left").hide(1000);
+            $(".left_signup").show(1000);
+
+        });
+    });
+   </script>
+   <script type="text/javascript">
+         $(document).ready(function(){
+        $("#Cancel").click(function(){
+            $(".left").show(1000);
+            $(".left_signup").hide(1000);
+
+        });
+    });
+   </script>
+ </head>
+<body>
+    <div class="one">
+     	<div class="mylogo">
+     		<span>JigyaXa</span>
+     		<h2>A place to share knowledge and better understand the world.</h2>
+     	</div>
+
+      <div>
+
+         <div class="left">
+            <div class="left_google">
+               <a class = "google" href="#"><i class="fa fa-google"></i>Continue with Google</a>
+               <a class= "facebook" href="#"><i class="fa fa-facebook"></i>Continue with Facebook</a>
+            </div>
+            <div class="left_other">
+              <p><a class="next">Continue With Email</a> .By signing up you indicate that you have read and agree to Quora's Terms of Service and Privacy Policy.</p>
+            </div>
+          </div>
+
+          <div class="left_signup" style="display: none;">
+          	<span>Signup</span>
+                <form action="signup_info" method="post">
+                 <div ><label>First Name</label><input type="text" name="Firstname" required></div>
+                 <div><label>Last Name<input type="text" name="Lastname" required></label></div>
+                 <div>
+                 <label>Email <input type="email" name="username2" class="signup_email"></label>
+                 </div>
+                 <div class="pwd">
+                 <label>Password <input type="password" name="password2" class="signup_pwd"></label>
+                 </div>
+                 <div class="confirmpwd">
+                 <label>Confirm Password <input type="password" name="signup_pwd" class="confirm_signup_pwd"></label>
+                 </div>
+                 <div style="float: left;width: 100%;">
+                   <a  style="width: 50%;display: inline-block;float: left;padding: 10.5px 0px; " id="Cancel">Cancel</a>
+                   <input type="submit" name="signup_submit" value="Signup" class="left_signup_submit" style="width: 50%;">
+                 </div>
+              </form>
+          </div>
+          <div class="right">
+          	<span>Login</span>
+                <form action ="login_info" method="post">
+          		<input type="text" class="input_user" name="username" placeholder="Email" required>
+          		<input type="password" class="input_pwd" name="password" placeholder="Password" required>
+          		<a href="">Forgot Password?</a>
+          		<input type="submit" class="submit" name="submit" value="Login">
+          	</form>
+          </div>
+      </div>
+
+    </div>
+</body>
+</html>
